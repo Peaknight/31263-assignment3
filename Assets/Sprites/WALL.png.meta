@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2e239221683194a958e4274d7d3fb3
-      internalID: -1232533894
+      spriteID: ca6ef3143e88e9545a446e61bfc7412f
+      internalID: -2064194427
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd4e7158d72993348a9808373c971150
-      internalID: -1392345745
+      spriteID: b21429f4a8a248e4aa65831cd766070d
+      internalID: 1549660338
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61830bd8b4e50842bcd8031d2f68d31
-      internalID: -166519645
+      spriteID: 58a3e05b0f890424cac011167f88811c
+      internalID: 1050778346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WALL_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb8cad5f6996424a9d51ac85e6d8e8c
+      internalID: 1480229873
       vertices: []
       indices: 
       edges: []
@@ -183,7 +204,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f396942a0e0aa2046b212760de5aba00
+    spriteID: a85b3d6f7bc993d4b8c3b3fa507491b2
     internalID: 0
     vertices: []
     indices: 
@@ -191,10 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WALL_2: -1392345745
-      WALL_1: -863118301
-      WALL_0: -1232533894
-      WALL_3: -166519645
+      WALL_2: 1549660338
+      WALL_4: 1480229873
+      WALL_1: 1852573358
+      WALL_0: -2064194427
+      WALL_3: 1050778346
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
