@@ -6722,7 +6722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 917359463}
   spriteRenderer: {fileID: 917359465}
-  animatorController: {fileID: 917359464}
+  animator: {fileID: 917359464}
   audiosource: {fileID: 947110111}
 --- !u!114 &947110113
 MonoBehaviour:
