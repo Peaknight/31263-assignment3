@@ -17,7 +17,6 @@ public class AutoMoving : MonoBehaviour
     private AudioSource audiosource;
 
     private Tweener tweener;
-    private List<GameObject> itemList;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,16 +33,15 @@ public class AutoMoving : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-
             MoveRight(new Vector3(6.5f, -0.5f, 0), 1.5f);
-            yield return new WaitForSeconds(1.5f);
 
+            yield return new WaitForSeconds(1.5f);
             MoveDown(new Vector3(6.5f, -4.5f, 0), 1.0f);
+
             yield return new WaitForSeconds(1f);
-
             MoveLeft(new Vector3(1.5f, -4.5f, 0), 1.5f);
-            yield return new WaitForSeconds(1.5f);
 
+            yield return new WaitForSeconds(1.5f);
             MoveUp(new Vector3(1.5f, -0.5f, 0), 1.0f);
         }
     }
