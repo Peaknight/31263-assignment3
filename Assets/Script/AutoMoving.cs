@@ -11,7 +11,7 @@ public class AutoMoving : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     [SerializeField]
-    private Animator animatorController;
+    private Animator animator;
 
     [SerializeField]
     private AudioSource audiosource;
@@ -52,29 +52,29 @@ public class AutoMoving : MonoBehaviour
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(1.5f, -4.5f, 0), 1.5f);
-        animatorController.SetFloat("DirX", -1.0f);
-        animatorController.SetFloat("DirY", 0.0f);
+        animator.SetFloat("DirX", -1.0f);
+        animator.SetFloat("DirY", 0.0f);
     }
     public void MoveRight(Vector3 postion, float Duration)
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(6.5f, -0.5f, 0), 1.5f);
-        animatorController.SetFloat("DirX", 1.0f);
-        animatorController.SetFloat("DirY", 0.0f);
+        animator.SetFloat("DirX", 1.0f);
+        animator.SetFloat("DirY", 0.0f);
     }
     public void MoveUp(Vector3 postion, float Duration)
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(1.5f, -0.5f, 0), 1.0f);
-        animatorController.SetFloat("DirY", 1.0f);
-        animatorController.SetFloat("DirX", 0.0f);
+        animator.SetFloat("DirY", 1.0f);
+        animator.SetFloat("DirX", 0.0f);
     }
     public void MoveDown(Vector3 postion, float Duration)
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(6.5f, -4.5f, 0), 1.0f);
-        animatorController.SetFloat("DirY", -1.0f);
-        animatorController.SetFloat("DirX", 0.0f);
+        animator.SetFloat("DirY", -1.0f);
+        animator.SetFloat("DirX", 0.0f);
     }
 
     // Update is called once per frame
