@@ -33,41 +33,41 @@ public class AutoMoving : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            MoveRight(new Vector3(6.5f, -0.5f, 0), 1.5f);
+            MoveRight();
 
             yield return new WaitForSeconds(1.5f);
-            MoveDown(new Vector3(6.5f, -4.5f, 0), 1.0f);
+            MoveDown();
 
             yield return new WaitForSeconds(1f);
-            MoveLeft(new Vector3(1.5f, -4.5f, 0), 1.5f);
+            MoveLeft();
 
             yield return new WaitForSeconds(1.5f);
-            MoveUp(new Vector3(1.5f, -0.5f, 0), 1.0f);
+            MoveUp();
         }
     }
     
-    public void MoveLeft(Vector3 postion, float Duration)
+    public void MoveLeft()
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(1.5f, -4.5f, 0), 1.5f);
         animator.SetFloat("DirX", -1.0f);
         animator.SetFloat("DirY", 0.0f);
     }
-    public void MoveRight(Vector3 postion, float Duration)
+    public void MoveRight()
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(6.5f, -0.5f, 0), 1.5f);
         animator.SetFloat("DirX", 1.0f);
         animator.SetFloat("DirY", 0.0f);
     }
-    public void MoveUp(Vector3 postion, float Duration)
+    public void MoveUp()
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(1.5f, -0.5f, 0), 1.0f);
         animator.SetFloat("DirY", 1.0f);
         animator.SetFloat("DirX", 0.0f);
     }
-    public void MoveDown(Vector3 postion, float Duration)
+    public void MoveDown()
     {
         StartMove();
         tweener.AddTween(item.transform, item.transform.position, new Vector3(6.5f, -4.5f, 0), 1.0f);
