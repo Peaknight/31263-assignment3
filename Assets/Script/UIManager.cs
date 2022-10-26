@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
     public void LevelBtn()
     {
         StopAllCoroutines();
+        gameObject.GetComponent<Tweener>().enabled = false;
         SceneManager.LoadSceneAsync(1);
     }
 
@@ -66,7 +67,7 @@ public class UIManager : MonoBehaviour
     }
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     IEnumerator BoldMoving()
