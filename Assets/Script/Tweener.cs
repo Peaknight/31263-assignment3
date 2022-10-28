@@ -20,7 +20,7 @@ public class Tweener : MonoBehaviour
             {
                 float t = (Time.time - activeTween.StartTime1) / (activeTween.Duration1);
                 activeTween.Target1.transform.position = Vector3.Lerp(activeTween.StartPos1, activeTween.EndPos1, t * t * t);
-                Debug.Log((Time.time - activeTween.StartTime1) / (Time.time + activeTween.Duration1));
+                //Debug.Log((Time.time - activeTween.StartTime1) / (Time.time + activeTween.Duration1));
             }
             else if (Vector3.Distance(activeTween.Target1.transform.position, activeTween.EndPos1) <= 0.1f)
             {
@@ -35,4 +35,5 @@ public class Tweener : MonoBehaviour
     {
         activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
     }
+
 }
