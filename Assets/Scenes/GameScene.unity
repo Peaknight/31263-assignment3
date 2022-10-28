@@ -2521,6 +2521,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 293750935228439475, guid: 732e1b794971e8f4399ba6652effeb86, type: 3}
   m_PrefabInstance: {fileID: 1371543471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &335404468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335404469}
+  m_Layer: 0
+  m_Name: TryToFixGitConflict
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335404469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335404468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 990.42755, y: 445.71207, z: 47.586426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &363294735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 293750935228439475, guid: 732e1b794971e8f4399ba6652effeb86, type: 3}
