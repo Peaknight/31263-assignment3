@@ -8,10 +8,12 @@ public class UIManager : MonoBehaviour
 {
     private Text score;
     private Text time;
-    private GameObject[] edgeMoving;
+    // GameObject[] edgeMoving;
+   // public List<GameObject> edgeMoving;
     private Tweener tweener;
     public GameObject item;
-    /*public GameObject leftItem;
+    /*public GameObject upItem;
+    public GameObject leftItem;
     public GameObject downItem;
     public GameObject rightItem;*/
     // Start is called before the first frame update
@@ -33,17 +35,20 @@ public class UIManager : MonoBehaviour
             time.text = higherTime;
         }
 
-        /*edgeMoving = new GameObject[4];
-        edgeMoving[0] = upItem;
-        edgeMoving[1] = leftItem;
-        edgeMoving[2] = downItem;
-        edgeMoving[3] = rightItem;*/
- 
+       /* edgeMoving = new List<GameObject>();
+        edgeMoving.Add(upItem);
+        edgeMoving.Add(leftItem);
+        edgeMoving.Add(downItem);
+        edgeMoving.Add(rightItem);*/
+
 
         StartCoroutine(BoldMoving());
-        //StartCoroutine(DownMoving());
+        /*StartCoroutine(UpMoving());
+        StartCoroutine(DownMoving());
+        StartCoroutine(LeftMoving());       
+        StartCoroutine(RightMoving());*/
 
-       
+
     }
     public void LevelBtn()
     {
@@ -87,21 +92,7 @@ public class UIManager : MonoBehaviour
 
             MoveUp();
         }
-    }
-    /*IEnumerator DownMoving()
-    {
-        GameObject g2 = edgeMoving[2];
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-
-            Moving(g2, new Vector3(-1400f, 0), 1f);
-            yield return new WaitForSeconds(1f);
-
-            Moving(g2, new Vector3(1400f, 0), 1f);
-            yield return new WaitForSeconds(1f);
-        }
-    }*/
+    } 
     public void MoveLeft()
     {
   
@@ -122,5 +113,75 @@ public class UIManager : MonoBehaviour
         tweener.AddTween(item.transform, item.transform.position, new Vector3(1650f, 220f, 0), 1.0f);
 
     }
+
+
+   
+    /*IEnumerator UpMoving()
+    {
+        GameObject g0 = edgeMoving[0];
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            Moving(g0, new Vector3(1400f, 0), 1f);
+            yield return new WaitForSeconds(1f);
+
+            Moving(g0, new Vector3(-1400f, 0), 1f);
+            yield return new WaitForSeconds(1f);
+        }
+    } 
+    IEnumerator DownMoving()
+    {
+        GameObject g2 = edgeMoving[2];
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            Moving(g2, new Vector3(-1400f, 0), 1f);
+            yield return new WaitForSeconds(1f);
+
+            Moving(g2, new Vector3(1400f, 0), 1f);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    IEnumerator LeftMoving()
+    {
+        GameObject g1 = edgeMoving[1];
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            Moving(g1, new Vector3(0, 320), 1f);
+            yield return new WaitForSeconds(1f);
+
+            Moving(g1, new Vector3(0, -320), 1f);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    IEnumerator RightMoving()
+    {
+        GameObject g3 = edgeMoving[3];
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            Moving(g3, new Vector3(0, -320), 1f);
+            yield return new WaitForSeconds(1f);
+
+            Moving(g3, new Vector3(0, 320), 1f);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+
+    void Moving(GameObject item, Vector3 vector, float duration = 0.25f)
+    {
+        AddTweenToPosition(item, item.transform.position + vector, duration);
+    }
+
+    void AddTweenToPosition(GameObject item, Vector3 position, float duration)
+    {
+        tweener.AddTween(item.transform, item.transform.position, position, duration);
+    }*/
 
 }
